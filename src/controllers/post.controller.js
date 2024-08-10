@@ -24,7 +24,7 @@ const tweets = [
         description: "Este es el segundo post de la cuenta test2",
         date: "10/08/2024  9:00 AM"
     }
-]
+];
 
 export const listTweets = (req, res) => {
     const {query} = req;
@@ -34,14 +34,14 @@ export const listTweets = (req, res) => {
         return res.status(403).json({
             error: "User doesn't exist."
         })
-    }
+    };
 
     const userTweets = tweets.filter((tweets) => tweets.username === query.username);
     if(userTweets.length === 0){
         return res.status(404).json({
             error: "User hasn't posted anything yet..."
         })
-    }
+    };
 
     res.send(userTweets);
 };
@@ -54,13 +54,13 @@ export const saveTweet = (req, res) => {
         return res.status(403).json({
             error: "User doesn't exist."
         })
-    }
+    };
 
-    tweets.push(query)
-    console.log('----...Tweet sucessful...----')
-    console.log(query)
-    console.log('----...tweets...----')
-    console.log(tweets)
+    tweets.push(query);
+    console.log('----...Tweet sucessful...----');
+    console.log(query);
+    console.log('----...tweets...----');
+    console.log(tweets);
 
     res.sendStatus(201);
-}
+};
