@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { } from "../controllers/post.controller.js"
+import {listTweets, saveTweet } from "../controllers/post.controller.js"
 
 const router = Router();
 
-router.get('/posts', );
+router.get('/tweet', listTweets);
 
-router.post('/posts', );
+router.post('/tweet', saveTweet);
 
 export default router

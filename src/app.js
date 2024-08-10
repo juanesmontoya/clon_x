@@ -8,6 +8,6 @@ const app = express();
 app.use(morgan('dev'));
 
 app.use("/x",authRoutes);
-app.use("x/",postRoutes);
+app.use("/x",postRoutes);
 
 export default app;
