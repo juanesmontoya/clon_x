@@ -14,3 +14,5 @@ const followerSchema = mongoose.Schema({
         required: true
     }
 })
+
+export default mongoose.model('Follower', followerSchema);

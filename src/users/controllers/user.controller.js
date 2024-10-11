@@ -17,7 +17,7 @@ export const userList = (req, res) => {
     res.send(users)
 };
 
-export const listUser = (req, res) => {
+export const searchUser = (req, res) => {
     const {query} = req;
     
     const user = users.filter((user) => user.username === query.username);
@@ -31,25 +31,26 @@ export const listUser = (req, res) => {
     res.send(user);
 };
 
-export const verifyUser = (req, res) => {
-    const {query} = req;
-    
-    const userName = users.filter((user) => user.username === query.username);
-    const userEmail = users.filter((user) => user.email === query.email);
+export const createUser = (req, res) => {
 
-    if(userName.length > 0){
+    /* if(userName.length > 0){
         return res.status(406).json({
-            error: "User name already exists."
+            error: "Username already exists."
         })
-    } 
+    };
     if (userEmail.length > 0) {
         return res.status(406).json({
-            error: "User email already exists."
+            error: "User email already exists."ßß
         })
-    }
+    }; */
     
-    users.push(query)
-    console.log('----...User created...----')
-    console.log(query)
-    res.sendStatus(201);
+    res.status(201).json({
+        ok: true,
+        message: "User is created."
+    });
 };
+
+/* export const login = () => {
+    const {email, password} = req.body;
+
+} */

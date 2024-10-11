@@ -1,5 +1,3 @@
-import { users } from "./user.controller.js";
-
 export const followersHistoric = [
     {
         username: "test",

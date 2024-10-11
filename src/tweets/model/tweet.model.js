@@ -8,4 +8,4 @@ const tweetSchema = mongoose.Schema({
     }
 })
 
-export default mongoose.model('Tweet', tweetSchema)
+export default mongoose.model('Tweet', tweetSchema);

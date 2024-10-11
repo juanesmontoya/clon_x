@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {listTweets, saveTweet } from "../controllers/post.controller.js"
+import {listTweets, saveTweet } from "../tweets/controllers/tweet.controller.js"
 
 const router = Router();
 

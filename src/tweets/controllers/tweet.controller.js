@@ -1,5 +1,3 @@
-import { users } from "./user.controller.js";
-
 const tweets = [
     {
         fullname: "test uno",
