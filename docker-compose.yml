@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   api:
     container_name: clone_x
@@ -8,7 +6,7 @@ services:
       - "3000:3000"
     environment:
       APP_PORT: 3000
-      MONGODB_URI: mongo_db://mongo_db:27017
+      MONGODB_URI: mongodb+srv://juanesmontoya92:tdea@electiva2.zd1g5.mongodb.net/
       DB_NAME: clone_x
     volumes:
       - .:/app
