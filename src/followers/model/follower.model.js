@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const followerSchema = mongoose.Schema({
+const followerSchema = new mongoose.Schema({
     username:{
         type: String,
         required: true,
@@ -13,6 +13,8 @@ const followerSchema = mongoose.Schema({
         trim: true,
         required: true
     }
+}, {
+    timestamps:true
 })
 
 export default mongoose.model('Follower', followerSchema);

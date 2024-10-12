@@ -6,8 +6,8 @@ services:
       - "3000:3000"
     environment:
       APP_PORT: 3000
-      MONGODB_URI: mongodb+srv://juanesmontoya92:tdea@electiva2.zd1g5.mongodb.net/
-      DB_NAME: clone_x
+      MONGODB_URI: mongodb+srv://juanesmontoya92:tdea@electiva2.zd1g5.mongodb.net/xdb
+      JWT_SECRET: anysecret
     volumes:
       - .:/app
     depends_on:
